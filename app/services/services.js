@@ -6,7 +6,6 @@ angular.module('myApp')
     this.information;
 
     this.finishUp = function () {
-      console.log(this.information);
       return this.information;
     }
 
@@ -32,7 +31,6 @@ angular.module('myApp')
       this.information.twitter = twitter;
       this.information.facebook = facebook;
       this.information.instagram = instagram;
-      console.log(this.information)
     }; 
     // ======================================
 
@@ -43,7 +41,6 @@ angular.module('myApp')
     this.createNewPlayer = function ( playerInfo ) {
       $http.post('/addPlayer', playerInfo)
         .then(result => {
-          console.log(result, 'result from post to /addPlayer');
         })
         .catch(err => console.error(err));
     };

@@ -13,7 +13,7 @@ const jsonParser = bodyParser.json();
 app.use(express.static(`app`));
 
 app.post('/addPlayer', jsonParser, (req, res) => {
-  console.log(req.body, 'req.body from post /addPlayer')
+  // console.log(req.body, 'req.body from post /addPlayer')
   const player = req.body;
   const newPlayer = new Player({ 
     name: player.name,

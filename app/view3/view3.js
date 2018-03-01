@@ -18,7 +18,6 @@ angular.module('myApp.view3', ['ngRoute'])
   }
 
   this.submission = function (info) {
-    console.log(info, 'infor going into createNewPlayer from view3');
     playerService.createNewPlayer(info);
   }
 

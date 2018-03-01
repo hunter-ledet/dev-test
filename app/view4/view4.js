@@ -18,7 +18,6 @@ angular.module('myApp.view4', ['ngRoute'])
     playerService.gatherStore()
     .then(result => this.allInfo = result)
     .catch(err => console.error(err));
-    console.log(this.allInfo, 'this is allInfo in view4')
   }
 
   $scope.go = function ( path ) {

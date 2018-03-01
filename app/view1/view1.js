@@ -16,7 +16,6 @@ angular.module('myApp.view1', [('ngRoute')])
     };
 
     this.maintain = function ( name, nationality, gender, sport, bday ) {
-      console.log("hi")
       playerService.maintainView1(name, nationality, gender, sport, bday);
       playerService.finishUp();
     };
