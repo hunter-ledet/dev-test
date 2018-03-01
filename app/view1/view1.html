@@ -1,1 +1,37 @@
-<p>This is the partial for view 1.</p>
+<div ng-controller="View1Ctrl as $ctrl">
+<h1>About You</h1>
+<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name" ng-model="name">
+  </div>
+</form>
+<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Nationality</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nationality" ng-model="nationality">
+  </div>
+  <form class="form-inline">
+    <label class="mr-sm-1" for="inlineFormCustomSelect">Gender</label>
+    <select class="custom-select mb-2 mr-sm-1 mb-sm-0" id="inlineFormSelect" ng-model="gender">
+      <option selected>Choose...</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </form>
+</form>
+<form class="form-inline">
+  <label class="mr-sm-1" for="inlineFormCustomSelect">Sports</label>
+  <select class="custom-select mb-2 mr-sm-1 mb-sm-0" id="inlineFormSelect" ng-model="sportSelect">
+    <option selected>Choose...</option>
+    <option ng-repeat="sport in $ctrl.sports" sport="sport">{{sport}}</option>
+  </select>
+</form>
+<form>
+  <div class="form-group row">
+      <label for="example-date-input" class="col-2 col-form-label">Birthday</label>
+      <input class="form-control" type="date" value="2011-08-19" id="example-date-input" ng-model="bday">
+    </div>
+</form>
+<button type="submit" class="btn btn-primary" ng-click="go('/view2'); $ctrl.maintain(name, nationality, gender, sportSelect, bday)">Continue</button>
+</div>

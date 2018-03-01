@@ -1,0 +1,7 @@
+<div ng-controller="View4Ctrl as $ctrl" ng-init="$ctrl.gatherFromDB()">
+    <ul class="list-group list-group-flush">
+      <h2>Your Previous Submissions</h2>
+        <li class="list-group-item" ng-repeat="player in $ctrl.allInfo" player="player"><b>Name:</b> {{player.name}}<br><br><b>Team:</b> {{player.team}}</li>
+      </ul>
+      <!-- <button type="submit" class="btn btn-primary" ng-click="go('/view4'); $ctrl.submission($ctrl.allInfo)">Submit</button> -->
+</div>

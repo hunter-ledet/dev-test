@@ -9,6 +9,17 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', function($scope, $location, playerService) {
 
-}]);
+  $scope.allInfo;
+
+  $scope.go = function ( path ) {
+    $location.path( path );
+    $scope.allInfo = playerService.finishUp();
+  };
+
+  this.maintain = function ( team, location, description, twitter, facebook, instagram ) {
+    playerService.maintainView2( team, location, description, twitter, facebook, instagram );
+  }
+
+});

@@ -1,0 +1,18 @@
+<div ng-controller="View3Ctrl as $ctrl" ng-init="$ctrl.gather()">
+    <ul class="list-group list-group-flush">
+      <h2>Your Information</h2>
+        <li class="list-group-item">Name - {{$ctrl.allInfo.name}}</li>
+        <li class="list-group-item">Nationality - {{$ctrl.allInfo.nationality}}</li>
+        <li class="list-group-item">Gender - {{$ctrl.allInfo.gender}}</li>
+        <li class="list-group-item">Sport - {{$ctrl.allInfo.sport}}</li>
+        <li class="list-group-item">Birthday - {{$ctrl.allInfo.bday}}</li>
+        <h2>Team Information</h2>
+        <li class="list-group-item">Team Name - {{$ctrl.allInfo.team}}</li>
+        <li class="list-group-item">Location - {{$ctrl.allInfo.location}}</li>
+        <li class="list-group-item">Description - {{$ctrl.allInfo.description}}</li>
+        <li class="list-group-item">Twitter - {{$ctrl.allInfo.twitter}}</li>
+        <li class="list-group-item">Facebook - {{$ctrl.allInfo.facebook}}</li>
+        <li class="list-group-item">Instagram - {{$ctrl.allInfo.instagram}}</li>
+      </ul>
+      <button type="submit" class="btn btn-primary" ng-click="go('/view4'); $ctrl.submission($ctrl.allInfo)">Submit</button>
+</div>
